@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/linear"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/arvo"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_namapasien"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/arvo"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_namapenyakitku"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="right"
+            android:fontFamily="@font/arvo"
+            android:id="@+id/txt_tgl"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/riw_umur"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/riw_jk"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

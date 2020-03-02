@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login"
+    tools:context=".Diagnosa">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Pilih Gejala Yang Dirasakan"
+        android:layout_gravity="center"
+        android:fontFamily="@font/arvo"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+
+    <ListView
+        android:id="@+id/lv_diagnosa"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/btn_digns"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/button"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="45dp"
+            android:text="Diagnosa" />
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/btn_kemb"
+            android:background="@drawable/button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Kembali"
+            android:layout_marginRight="45dp"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tes"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

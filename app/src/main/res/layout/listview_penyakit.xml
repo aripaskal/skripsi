@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/linear"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="left"
+            android:fontFamily="@font/arvo"
+            android:id="@+id/txt_kdPenyakit"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/arvo"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/txt_IDPenyakit"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:fontFamily="@font/arvo"
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_namaPenyakit"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/dataprosedur"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/dataperalatan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/dataperwatan"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

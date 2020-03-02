@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login"
+    tools:context=".HasilDiagnosa">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/atas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hasil Diagnosa"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:fontFamily="@font/arvo"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="5dp">
+            <TextView
+                android:id="@+id/hasil_peny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penyakit Terdiagnosa:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+            <TextView
+                android:id="@+id/hasil_penyakit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tes"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp">
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keparahan:"
+                android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="@font/arvo"/>
+            <TextView
+                android:id="@+id/hasil_keparahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gejala Penyakit:"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/arvo"/>
+            <TextView
+                android:id="@+id/hasil_gejala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gejala"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prosedur Tindakan Dokter Gigi:"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+
+            <TextView
+                android:id="@+id/hasil_prosedur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="prosedur"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peralatan dan Bahan/Obat:"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+
+            <TextView
+                android:id="@+id/hasil_peralatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="peralatan"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lama Perawatan:"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+
+            <TextView
+                android:id="@+id/hasil_lama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lama"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/arvo"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:elevation="6dp"
+        android:src="@drawable/ic_check_black_24dp"/>
+
+</RelativeLayout>

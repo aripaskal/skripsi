@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Skripsi</string>
+    <string name="Sistem">Sistem Pakar</string>
+    <string name="gigi">Gigi dan Mulut</string>
+    <string name="login">Login Admin</string>
+    <string name="diagnosa">Diagnosa</string>
+    <string name="login_admin">LOGIN ADMIN</string>
+    <string name="kete">Pilih Keparahan</string>
+    <string name="kemungkinan">Penyakit :</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_menu_gejala">MenuGejala</string>
+    <string name="title_activity_menu_penyakit">MenuPenyakit</string>
+    <string name="title_activity_menu_hubungan">MenuHubungan</string>
+    <string name="title_activity_hahaha">Hahaha</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>
