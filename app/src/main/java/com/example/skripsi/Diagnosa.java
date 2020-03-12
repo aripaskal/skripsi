@@ -9,11 +9,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +51,7 @@ public class Diagnosa extends AppCompatActivity {
     String dipilihl, dipilih2;
     TextView penyakit1, keparahan1, gejala, prosedur, peralatan, lama;
     EditText edtNama;
+    SearchView searchView;
     ProgressDialog pdialog;
     List<Data> dataArray;
     RequestQueue mQueue;
@@ -145,6 +149,28 @@ public class Diagnosa extends AppCompatActivity {
        dialog.show();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.popup, menu);
+        MenuItem menuItem = menu.findItem(R.id.search);
+        searchView = (SearchView) menuItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String text) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adpt.getFilter().filter(newText);
+
+                return true;
+            }
+        });
+
+        return true;
+    }
+
     private void loadJson(){
         pdialog = new ProgressDialog(this);
         pdialog.setMessage("Loading...");
@@ -180,16 +206,20 @@ public class Diagnosa extends AppCompatActivity {
     }
 
     private void loadHasilDiagnosa(String req){
+        pdialog = new ProgressDialog(this);
+        pdialog.setMessage("Loading...");
         Data dt = new Data(req);
         dataArray.add(dt);
         Gson gson = new Gson();
         final String newdataArray =gson.toJson(dataArray);
+        showDialog();
         StringRequest request = new StringRequest(Request.Method.POST, ServerApi.KIRIM_DATA,
 
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Log.d("volley", "response : " + response.toString());
+                        hideDialog();
                             try {
                                 JSONObject jsonObject = new JSONObject(response);
                                     Log.d("Output",jsonObject.getString("nama_penyakit"));

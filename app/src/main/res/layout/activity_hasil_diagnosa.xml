@@ -118,6 +118,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 android:textSize="16sp"
+                android:justificationMode="inter_word"
                 android:fontFamily="@font/arvo"/>
 
             <TextView
@@ -137,6 +138,7 @@
                 android:text="peralatan"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
+                android:justificationMode="inter_word"
                 android:textSize="16sp"
                 android:fontFamily="@font/arvo"/>
 
@@ -157,6 +159,7 @@
                 android:text="lama"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
+                android:justificationMode="inter_word"
                 android:textSize="16sp"
                 android:fontFamily="@font/arvo"/>
 

@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.Filter;
 import android.widget.TextView;
-
 import com.example.skripsi.Model.MGejala;
 import com.example.skripsi.R;
 
@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class AdapterDiagnosa extends BaseAdapter {
     Context context;
     ArrayList<MGejala> gejalas;
+    ArrayList<MGejala> arrayList;
     CheckBox cbgejala;
     TextView tvgejala, idgejala;
 
@@ -23,7 +24,7 @@ public class AdapterDiagnosa extends BaseAdapter {
     public AdapterDiagnosa (Context context, ArrayList<MGejala> gejalas){
         this.context =context;
         this.gejalas = gejalas;
-
+        this.arrayList = gejalas;
     }
 
     @Override
@@ -63,6 +64,37 @@ public class AdapterDiagnosa extends BaseAdapter {
         return convertView;
     }
 
+    public Filter getFilter() {
+
+        return filter;
+    }
+    private Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            FilterResults filterResults = new FilterResults();
+            if (constraint.toString().isEmpty()){
+                filterResults.count = arrayList.size();
+                filterResults.values = arrayList;
+            }else {
+                ArrayList<MGejala> filterd = new ArrayList<>();
+                for (MGejala gejala1 : arrayList){
+                    if (gejala1.getGejala().toLowerCase().contains(constraint.toString().toLowerCase().trim())){
+                        filterd.add(gejala1);
+                    }
+                    filterResults.count = filterd.size();
+                    filterResults.values = filterd;
+                }
+            }
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            gejalas = (ArrayList<MGejala>) results.values;
+            notifyDataSetChanged();
+        }
+    };
+
     public ArrayList <MGejala> getAllData(){
         return gejalas;
     }
@@ -72,4 +104,5 @@ public class AdapterDiagnosa extends BaseAdapter {
         gejala.setCheck(!gejala.isCheck());
         notifyDataSetChanged();
     }
+
 }
